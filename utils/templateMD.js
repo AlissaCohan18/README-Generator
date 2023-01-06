@@ -19,7 +19,7 @@ module.exports = (readmeDetail) => {
 
           ## License
           ${x.license}
-          ${licenseBadge(readmeDetail)}
+          ${licenseBadge(x.license)}
 
           ## Contributing
           ${x.contributing}
@@ -34,9 +34,8 @@ module.exports = (readmeDetail) => {
         `;
 };
 
-function licenseBadge(readmeDetail) {
-  readmeDetail.filter((x) => {
-    switch (x.license) {
+function licenseBadge(badgeDetail) {
+     switch (badgeDetail) {
       case "MIT":
         return "I used MIT";
       case "Apache":
@@ -44,5 +43,4 @@ function licenseBadge(readmeDetail) {
       default:
         return "I used ISC";
     }
-  });
-}
+  };

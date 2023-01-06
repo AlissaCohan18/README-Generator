@@ -20,8 +20,40 @@ const promptQuestions = (readmeInput) => {
       },
       {
         type: "input",
-        name: "url",
-        message: "What is the deployed url?",
+        name: "contents",
+        message: "What is in the table of contents?",
+      },
+      {
+        type: "input",
+        name: "installation",
+        message: "What are the Installation Instructions?",
+      },
+      {
+        type: "input",
+        name: "usage",
+        message: "What is your usage information?",
+      },
+      //type:list user must select only one option from the list
+      {
+        type: "list",
+        name: "license",
+        message: "Select the appropriate license",
+        choices: ['Apache 2.0','ISC','MIT','Mozilla','NCSA'],
+      },      
+      {
+        type: "input",
+        name: "contributing",
+        message: "What are the contribution guidelines?",
+      },
+      {
+        type: "input",
+        name: "tests",
+        message: "What are the test instructions?",
+      },
+      {
+        type: "input",
+        name: "questions",
+        message: "What questions to include?",
       },
     ])
     .then((readmeInput) => {

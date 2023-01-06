@@ -3,19 +3,34 @@
      return `
          ${readmeDetail.map((x) => {
           return `
-          ## ${x.title}
+          # ${x.title}
           
-
-          ## Project Description:
+          ## Description:
           ${x.description}
           
-          ## Deployed Site
-          ${x.url}
+          ## Table of Contents
+          ${x.contents}
+
+          ## Installation
+          ${x.installation}
+          
+          ## Usage
+          ${x.usage}
+
+          ## License
+          ${x.license}
+
+          ## Contributing
+          ${x.contributing}
+
+          ## Tests // instructions
+          ${x.tests}
+
+          ## Questions
+          ${x.questions}
         `;
         })
         }
         `;
 };
-
-
 

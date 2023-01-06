@@ -20,11 +20,6 @@ const promptQuestions = (readmeInput) => {
       },
       {
         type: "input",
-        name: "contents",
-        message: "What is in the table of contents?",
-      },
-      {
-        type: "input",
         name: "installation",
         message: "What are the Installation Instructions?",
       },
@@ -38,8 +33,8 @@ const promptQuestions = (readmeInput) => {
         type: "list",
         name: "license",
         message: "Select the appropriate license",
-        choices: ['Apache 2.0','ISC','MIT','Mozilla','Eclipse',''],
-      },      
+        choices: ["Apache 2.0", "ISC", "MIT", "Mozilla", "Eclipse", ""],
+      },
       {
         type: "input",
         name: "contributing",
@@ -52,8 +47,13 @@ const promptQuestions = (readmeInput) => {
       },
       {
         type: "input",
-        name: "questions",
-        message: "What questions to include?",
+        name: "github",
+        message: "What is your Github Username?",
+      },
+      {
+        type: "input",
+        name: "email",
+        message: "What is your e-mail address?",
       },
     ])
     .then((readmeInput) => {
@@ -70,9 +70,9 @@ promptQuestions()
   .then((pageREADME) => {
     return createMD(pageREADME);
   })
- .then((copyFileResponse) => {
-   console.log(copyFileResponse);
- })
+  .then((copyFileResponse) => {
+    console.log(copyFileResponse);
+  })
   .catch((err) => {
     console.log(err);
   });

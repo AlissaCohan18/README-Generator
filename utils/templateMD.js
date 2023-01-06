@@ -1,4 +1,4 @@
-// Template for README Mark Down
+// Template for README Mark Down and passes in user input
 module.exports = (readmeDetail) => {
   return `  
 ${readmeDetail.map((x) => {
@@ -11,7 +11,12 @@ ${licenseBadge(x.license)}
 ${x.description}
 
 ## Table of Contents
-${x.contents}
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
 
 ## Installation
 ${x.installation}
@@ -30,7 +35,8 @@ ${x.contributing}
 ${x.tests}
 
 ## Questions
-${x.questions}
+You may view my github: https://github.com/${x.github}
+<br>Or for question, you may contact me at: ${x.email}
 `;
 })}
 `;

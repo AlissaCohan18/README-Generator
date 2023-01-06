@@ -38,7 +38,7 @@ const promptQuestions = (readmeInput) => {
         type: "list",
         name: "license",
         message: "Select the appropriate license",
-        choices: ['Apache 2.0','ISC','MIT','Mozilla','NCSA'],
+        choices: ['Apache 2.0','ISC','MIT','Mozilla','Eclipse',''],
       },      
       {
         type: "input",

@@ -57,7 +57,6 @@ const promptQuestions = (readmeInput) => {
       },
     ])
     .then((readmeInput) => {
-      console.log(readmeInput);
       return readmeInput;
     });
 };
